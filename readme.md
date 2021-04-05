@@ -28,7 +28,9 @@ Archivos **javascript**, incluyendo el de Bootstrap y Font Awesome.
 
 Carpeta con archivos **.scss** de estilos compilados con sass.
 
-    1.  main.scss: Principal que importa el resto de archivos scss.
+    1.  mainStyles.scss: Principal que importa el resto de archivos scss.
+![Imagen](images/Screenshot%20folders.png)
+
     2. _colors.scss: Colores y sus códigos a utilizar en cada página.
     3. _mixins.scss: Mixins genéricos para reutilizar código en los estilos.
     4. _responsive_mixins.scss: Mixins para el diseño responsivo de la web.
