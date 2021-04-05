@@ -2,31 +2,31 @@
 
 - ## CARPETA ROOT
 
-Archivos html de las páginas (index.html).
+Archivos **html** de las páginas (index.html).
 
-- ## CARPETA COMPONENTES
+- ## COMPONENTS
 
-Componentes comunes a todas las páginas (navbar, footer,etc.).
+**Componentes** comunes a todas las páginas (navbar, footer,etc.).
 
 - ## CSS
 
-Archivos css compilados de sass y bootstrap (en caso de que sea utilizado).
+Archivos **css** compilados de sass y Bootstrap (en caso de que sea utilizado).
 
 - ## FONTS
 
-Carpeta para almacenar fuentes en caso de que se haga uso de su inserción mediante @font-face.
+Carpeta para almacenar **fuentes** en caso de que se haga uso de su inserción mediante @font-face.
 
 - ## IMAGES
 
-Imágenes a utilizar en las páginas.
+**Imágenes** a utilizar en las páginas.
 
 - ## JS
 
-Archivos javascript, incluyendo el de bootstrap.
+Archivos **javascript**, incluyendo el de Bootstrap y Font Awesome.
 
 - ## SASS
 
-Carpeta con archivos .scss de estilos compilados con sass.
+Carpeta con archivos **.scss** de estilos compilados con sass.
 
     1.  main.scss: Principal que importa el resto de archivos scss.
     2. _colors.scss: Colores y sus códigos a utilizar en cada página.
