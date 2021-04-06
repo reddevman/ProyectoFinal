@@ -1,0 +1,17 @@
+.header_wrapper {
+	.header-full-wrapper {
+		.main-wrapper {
+			width: 100%;
+			height: 100px;
+			background-color: $linksColor;
+            
+            p {
+                color: $blanco;
+            }
+		}
+
+		p {
+			color: blueviolet;
+		}
+	}
+}

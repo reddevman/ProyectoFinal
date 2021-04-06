@@ -1,5 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 // basic imports
 @import './fonts';
 @import './colors';
 
+// sections
+@import './header';
 
