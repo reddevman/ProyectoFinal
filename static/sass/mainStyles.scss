@@ -11,3 +11,14 @@
 // sections
 @import './header';
 
+.container12 {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.test_container {
+    p {
+        font-family: $font3;
+        background-color: $mainColor;
+    }
+}
