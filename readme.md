@@ -1,30 +1,30 @@
 # README PROYECTO FINAL
 
-- ## CARPETA ROOT
+- ## /public_html
 
-Archivos **html** de las páginas (index.html).
+Archivos **html** de las páginas (index.html por ejemplo).
 
-- ## COMPONENTS
+- ## /components
 
 **Componentes** comunes a todas las páginas (navbar, footer,etc.).
 
-- ## CSS
+- ## /static/css
 
 Archivos **css** compilados de sass y Bootstrap (en caso de que sea utilizado).
 
-- ## FONTS
+- ## /static/fonts
 
 Carpeta para almacenar **fuentes** en caso de que se haga uso de su inserción mediante @font-face.
 
-- ## IMAGES
+- ## /static/images
 
 **Imágenes** a utilizar en las páginas.
 
-- ## JS
+- ## /static/js
 
-Archivos **javascript**, incluyendo el de Bootstrap y Font Awesome.
+Archivos **javascript**, incluyendo el de Bootstrap, Font Awesome Pro(hackeado) y mainScript.
 
-- ## SASS
+- ## /static/sass
 
 Carpeta con archivos **.scss** de estilos compilados con sass.
 
