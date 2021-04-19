@@ -1,31 +1,131 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.container12 {
-    width: 1140px;
-    margin: 0 auto;
-}
-
 .header-full-wrapper {
-    width: 100%;
-    height: 100px;
-    background-color: $mainColor;
-    
-    .header-content {
-        font-size: 1rem;
-        height: 100%;
-        display: flex;
-        align-items: center;
+	width: 100%;
+	height: 100px;
+	background-color: $mainColor;
+	box-shadow: 0px 7px 1px -1px $negro;
 
-        .logo-wrapper {
-            color: $blanco;
-            
-            .logo-header {
-                width: 100px;
-            }
-        }
-    }
+	.header-content {
+		font-size: 1rem;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.logo-wrapper {
+			color: $blanco;
+
+			.logo-header {
+				width: 100px;
+			}
+		}
+
+		.right-menu-header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			.icon-links {
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				div:not(:first-child) {
+					margin-left: 20px;
+				}
+
+				a {
+					color: $blanco;
+					transition: all 0.4s;
+
+					&:hover {
+						color: $negro;
+					}
+
+					i {
+						font-size: 1.3em;
+					}
+				}
+
+				.search-header {
+					// width: 200px;
+					display: flex;
+					justify-content: space-between;
+					color: $blanco;
+
+					&:hover {
+						border: 2px solid $blanco;
+						border-radius: 1em;
+
+						.search-form {
+							input {
+								opacity: 1;
+								width: 300px;
+							}
+						}
+					}
+
+					.search-form {
+						width: 100%;
+						display: flex;
+						justify-content: space-between;
+						padding: 0.4em;
+						transition: all 0.4s;
+						font-family: $font3;
+
+						input {
+							opacity: 0;
+							background-color: transparent;
+							border: none;
+							width: 0;
+							padding: 0 0.4em;
+							caret-color: $blanco;
+							color: $blanco;
+							font-weight: bold;
+							transition: all 0.4s;
+
+							&:focus {
+								outline: none;
+							}
+						}
+
+						button {
+							border: none;
+							background-color: transparent;
+							color: $blanco;
+							cursor: pointer;
+							transition: all 0.4s;
+
+							&:hover {
+								color: $negro;
+							}
+
+							i {
+								font-size: 1.3em;
+								font-weight: 700;
+							}
+						}
+					}
+				}
+			}
+
+			.blog-link {
+				margin-left: 20px;
+
+				a {
+					font-family: $font3;
+					font-weight: 600;
+					font-size: 1.3em;
+					letter-spacing: 2.4px;
+					text-decoration: none;
+					color: $blanco;
+					transition: all 0.4s;
+
+					&:hover {
+						color: $negro;
+					}
+				}
+			}
+		}
+	}
 }
