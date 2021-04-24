@@ -1,0 +1,13 @@
+.footer-content {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	color: $blanco;
+	font-family: $font3;
+	text-align: center;
+	letter-spacing: 1.2px;
+	background: $negro;
+	padding: 10px;
+	background-image: url('/ProyectoFinal/static/images/triangles.png');
+}

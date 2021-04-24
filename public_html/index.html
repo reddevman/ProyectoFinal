@@ -12,11 +12,31 @@
 </head>
 
 <body>
-	<header id="header-container">
+	<!-- Carga mediante ajax $().load -->
+	<header id="header_container">
+		<!-- Mensaje de error en caso de que no se cargue bien el componente -->
 		<span id="error"></span>
 	</header>
 
-	
+	<section class="main-banner">
+		<div class="bubble-wrapper">
+			<img src="/ProyectoFinal/static/images/sky-person.jpg" alt="">
+			<div class="bubble-icon-wrapper">
+				<div class="bubble-content">
+					<i class="fas fa-comment"></i>
+					<div class="bubble-text">
+						Hoy quiero aprender...
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Carga mediante ajax $().load -->
+	<footer id="footer_container">
+		<!-- Mensaje de error en caso de que no se cargue bien el componente -->
+		<span id="error"></span>
+	</footer>
 	<script src="/ProyectoFinal/static/js/jquery-3.6.0.min.js"></script>
 	<script src="/ProyectoFinal/static/js/mainScript.js"></script>
 

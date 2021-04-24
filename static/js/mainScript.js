@@ -8,8 +8,18 @@ $(function () {
 	});
 
 	// Carga del componente html y comprobación en caso de error
-	$('#header-container').load(
+	$('#header_container').load(
 		'/ProyectoFinal/components/header.html',
+		function (response, status, xhr) {
+			if (status == 'error') {
+				var msg = 'Sorry but there was an error: ';
+				$('#error').html(msg + xhr.status + ' ' + xhr.statusText);
+			}
+		}
+	);
+
+	$('#footer_container').load(
+		'/ProyectoFinal/components/footer.html',
 		function (response, status, xhr) {
 			if (status == 'error') {
 				var msg = 'Sorry but there was an error: ';
