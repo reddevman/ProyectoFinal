@@ -27,6 +27,16 @@ $(function () {
 			}
 		}
 	);
+
+	$('.courses-input').focusin(function (e) {
+		e.preventDefault();
+		$(this).val('');
+	});
+	
+	$('.courses-input').focusout(function (e) {
+		e.preventDefault();
+		$(this).val('Buscar cursos...');
+	});
 });
 
 // $.ajax({

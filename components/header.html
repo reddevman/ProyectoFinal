@@ -4,7 +4,7 @@
 
         <!-- HEADER LOGO -->
         <div class="logo-wrapper">
-            <a href="index.html"><img class="logo-header" src="/ProyectoFinal/static/images/logo.png" alt="E-Future logo"></a>
+            <a href="index.html"><img class="logo-header" src="/ProyectoFinal/static/images/logo.png" alt="E-Future logo" title="Aprende para el futuro"></a>
         </div>
 
         <!-- HEADER BLOQUE DERECHO -->
@@ -12,15 +12,17 @@
             <div class="icon-links">
                 <div class="search-header">
                     <form action="" class="search-form">
-                        <input type="text" name="search" id="" tabindex="16" placeholder="Buscar cursos...">
+                        <input class="header-courses-input" autocomplete="off" type="text" name="search" id="" tabindex="16" value="Buscar cursos..." placeholder="">
                         <button type="submit"><i class="far fa-search"></i></button>
                     </form>
                 </div>
                 <div class="cart-header">
                     <a href="#"><i class="far fa-shopping-cart"></i></a>
+                    <span class="tooltip-text-cart">Carrito</span>
                 </div>
                 <div class="login-header">
-                    <a href="#"><i class="fad fa-sign-in-alt"></i></a>
+                    <a href="/ProyectoFinal/public_html/login.html"><i class="fad fa-sign-in-alt"></i></a>
+                    <span class="tooltip-text-cart">Login</span>
                 </div>
             </div>
             <div class="blog-link">
@@ -29,3 +31,17 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(function () {
+        $('.header-courses-input').focusin(function (e) {
+            e.preventDefault();
+            $(this).val('');
+        });
+    
+        $('.header-courses-input').focusout(function (e) {
+            e.preventDefault();
+            $(this).val('Buscar cursos...');
+        });
+    });    
+</script>

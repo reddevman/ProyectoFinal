@@ -12,8 +12,13 @@
 @import './header';
 @import './footer';
 @import './index';
+@import './login';
 
 .container12 {
     width: 1140px;
     margin: 0 auto;
+}
+
+html, body {
+    height: 100%;
 }
