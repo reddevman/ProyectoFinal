@@ -562,6 +562,8 @@
   cursor: pointer;
   text-decoration: none;
   color: #303030;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .main-login-wrapper .login-content .register-link a::after {

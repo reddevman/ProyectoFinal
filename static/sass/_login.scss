@@ -95,6 +95,7 @@
 				cursor: pointer;
 				text-decoration: none;
 				color: $negro;
+				transition: all 0.3s;
 
 				&::after {
 					position: absolute;
