@@ -14,37 +14,9 @@
 </head>
 
 <body>
-	<!-- Carga mediante ajax $().load -->
-	<header id="header_container">
-		<!-- Mensaje de error en caso de que no se cargue bien el componente -->
-		<span id="error"></span>
-	</header>
 
 	<section class="main-banner">
-		<div class="bubble-wrapper">
-			<img class="back-image" src="/ProyectoFinal/static/images/sky-person.jpg" alt="">
-			<div class="bubble-icon-wrapper">
-				<div class="bubble-content">
-					<i class="fas fa-comment"></i>
-					<div class="bubble-text">
-						Hoy quiero aprender...
-					</div>
-					<div class="search-bar">
-						<form action="" class="search-form">
-							<input class="courses-input" autocomplete="off" type="text" name="search" id=""
-								tabindex="16" value="Buscar cursos..." placeholder="">
-							<button type="submit"><i class="far fa-search"></i></button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
 		<div class="banner_courses_wrapper container12">
-			<div class="title-courses">
-				<h1>
-					CURSOS TENDENCIA
-				</h1>
-			</div>
 			<div class="banner_x3_wrapper owl-carousel owl-theme">
 				<div class="banner">
 					<div class="image_wrapper">
@@ -81,7 +53,7 @@
 				</div>
 				<div class="banner">
 					<div class="image_wrapper">
-						<img src="../static/images/carousel-img-4.jpg">
+						<img src="../static/images/carousel-img-3.jpg">
 					</div>
 					<div class="banner_content">
 						<h4 class="title">Voluptate</h4>
@@ -92,7 +64,7 @@
 				</div>
 				<div class="banner">
 					<div class="image_wrapper">
-						<img src="../static/images/carousel-img-5.jpg">
+						<img src="../static/images/carousel-img-3.jpg">
 					</div>
 					<div class="banner_content">
 						<h4 class="title">Voluptate</h4>
@@ -103,7 +75,7 @@
 				</div>
 				<div class="banner">
 					<div class="image_wrapper">
-						<img src="../static/images/carousel-img-6.jpg">
+						<img src="../static/images/carousel-img-3.jpg">
 					</div>
 					<div class="banner_content">
 						<h4 class="title">Voluptate</h4>
@@ -116,18 +88,13 @@
 		</div>
 	</section>
 
-	<!-- Carga mediante ajax $().load -->
-	<!-- <footer id="footer_container"> -->
-		<!-- Mensaje de error en caso de que no se cargue bien el componente -->
-		<!-- <span id="error"></span> -->
-	<!-- </footer> -->
 	<script src="/ProyectoFinal/static/js/jquery-3.6.0.min.js"></script>
 	<script src="/ProyectoFinal/static/js/mainScript.js"></script>
 	<script src="../static/js/owl.carousel.min.js"></script>
 	<script>
 		$('.banner_x3_wrapper').owlCarousel({
 			loop: true,
-			nav: true,
+			nav: false,
 			navText: [
 				'<i class="fal fa-chevron-left"></i>',
 				'<i class="fal fa-chevron-right"></i>',
