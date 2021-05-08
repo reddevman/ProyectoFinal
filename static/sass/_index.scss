@@ -1,6 +1,9 @@
 .main-banner {
 	// height: 100vh;
 
+	// ******************************************************
+	// CONTENEDOR DE BOCADILLO CON IMAGEN DE FONDO Y BUSCADOR
+	// ******************************************************
 	.bubble-wrapper {
 		position: relative;
 		max-width: 100%;
@@ -41,8 +44,20 @@
 			.bubble-content {
 				position: absolute;
 				z-index: 1000;
-				left: 35%;
+				left: 40%;
 				top: 1%;
+				animation: slideInFromRight 2s ease-out;
+
+				@keyframes slideInFromRight {
+					0% {
+						transform: translateX(300%);
+						opacity: 0;
+					}
+					100% {
+						transform: translateX(0);
+						opacity: 1;
+					}
+				}
 
 				i {
 					color: white;
@@ -61,7 +76,6 @@
 				}
 
 				.search-bar {
-					// width: 200px;
 					position: absolute;
 					top: 55%;
 					left: 17%;
@@ -70,7 +84,7 @@
 					color: $negro;
 					border: 0.15em solid $mainColor;
 					border-radius: 1em;
-					// box-shadow: 0 0 1em 0.12em $negro;
+					box-shadow: 0.1em 0.12em 0.5em $negro;
 
 					.search-form {
 						width: 100%;
@@ -126,13 +140,16 @@
 		}
 	}
 
-	.banner_courses_wrapper {
+	// ************************************
+	// BANNER CARRUSEL DE CURSOS DESTACADOS
+	// ************************************
+	.featured_courses_wrapper {
 		height: auto;
 
 		.title-courses {
 			background-color: $mainColor;
 			margin-top: 3em;
-			font-family: $font3;
+			font-family: $font2;
 			position: relative;
 			width: 100%;
 			padding: 1em;
@@ -218,20 +235,25 @@
 				.banner_content {
 					position: absolute;
 					// Se oculta el 100% del contenido menos 115px que sí se verán
-					top: calc(100% - 7em);
+					top: calc(100% - 10em);
 					width: 100%;
 					height: 100%;
 					padding: 3.12em;
 					z-index: 5;
 					transition: all 0.8s;
 
+					i {
+						color: $blanco;
+						font-size: 3rem;
+					}
+
 					.title {
 						// FLEX NECESARIO PARA ANIMACIÓN
 						display: flex;
 						justify-content: center;
 						align-items: center;
-						font-family: $font1;
-						font-weight: normal;
+						font-family: $font2;
+						font-weight: bold;
 						font-size: 32px;
 						letter-spacing: 0.1em;
 						color: $blanco;
@@ -242,7 +264,7 @@
 					}
 
 					.text {
-						font-family: $font2;
+						font-family: $font5;
 						font-size: 1rem;
 						letter-spacing: 0.06em;
 						color: $blanco;
@@ -257,7 +279,7 @@
 						position: relative;
 						background-color: transparent;
 						color: $blanco;
-						font-family: $font1;
+						font-family: $font2;
 						text-decoration: none;
 						text-align: center;
 						text-transform: uppercase;

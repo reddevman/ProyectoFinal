@@ -7,6 +7,7 @@
 	font-family: $font3;
 	background: $negro;
 	text-align: center;
+	height: 3em;
 
 	.footer-content {
 		width: 100%;
@@ -20,17 +21,21 @@
 		justify-content: space-between;
 		align-items: center;
 
+		span {
+			display: inline-block;
+		}
+
 		.social-links {
 			display: flex;
 			height: 100%;
 			width: auto;
 			vertical-align: middle;
+			align-items: center;
 
 			a {
 				display: inline-block;
 				height: auto;
 				text-decoration: none;
-				vertical-align: middle;
 				color: $blanco;
 				transition: all 0.4s;
 
