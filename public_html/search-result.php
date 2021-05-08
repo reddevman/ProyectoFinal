@@ -3,16 +3,16 @@ $input = strtolower($_GET['search']);
 
 switch ($input) {
     case 'javascript':
-        header('Location: https://developer.mozilla.org/es/docs/Web/JavaScript');
+        header('Location: ../public_html/courses.html');
         break;
     case 'python':
-        header('Location: https://www.google.es');
+        header('Location: ../public_html/courses.html');
         break;
     case 'java':
-        header('Location: https://developer.mozilla.org/es/docs/Web/JavaScript');
+        header('Location: ../public_html/courses.html');
         break;
     case 'css':
-        header('Location: https://developer.mozilla.org/es/docs/Web/JavaScript');
+        header('Location: ../public_html/courses.html');
         break;
     
     default:
