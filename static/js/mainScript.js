@@ -9,7 +9,7 @@ $(function () {
 
 	// Carga del componente html y comprobación en caso de error
 	$('#header_container').load(
-		'/ProyectoFinal/components/header.html',
+		'/ProyectoFinal/components/header.php',
 		function (response, status, xhr) {
 			if (status == 'error') {
 				var msg = 'Sorry but there was an error: ';

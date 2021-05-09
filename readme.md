@@ -2,7 +2,7 @@
 
 - ## /public_html
 
-Archivos **html** de las páginas (index.html por ejemplo).
+Archivos **html** de las páginas (index.php por ejemplo).
 
 - ## /components
 

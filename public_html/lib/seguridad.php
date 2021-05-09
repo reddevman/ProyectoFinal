@@ -6,10 +6,14 @@ class Seguridad
     function __construct()
     {
         session_start();
-        if (isset($_SESSION['usuario'])) {
-            $this->usuario = $_SESSION['usuario'];
+        if (isset($_SESSION['id'])) {
+            $this->id = $_SESSION['id'];
         } else {
-            $_SESSION['usuario'] = null;
+            $_SESSION['id'] = null;
+        }
+
+        if (!isset($_SESSION["email"])) {
+            $_SESSION["email"] = null;
         }
 
         if (!isset($_SESSION["nombre"])) {
@@ -27,16 +31,16 @@ class Seguridad
 
 
     # FUNCIÓN PARA AÑADIR EL USUARIO A LA SESIÓN
-    public function addUsuario($usuario)
+    public function addId($id)
     {
-        $_SESSION["usuario"] = $usuario;
-        $this->usuario = $usuario;
+        $_SESSION["id"] = $id;
+        $this->id = $id;
     }
 
     # FUNCIÓN QUE BORRA LOS DATOS DE LA SESIÓN CUANDO NO SON NECESARIOS
     public function borrarDatos()
     {
-        $_SESSION["usuario"] = null;
+        $_SESSION["email"] = null;
         $_SESSION["nombre"] = null;
         $_SESSION["apellidos"] = null;
         $_SESSION["tipo_error"] = null;

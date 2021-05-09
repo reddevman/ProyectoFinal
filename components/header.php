@@ -2,9 +2,8 @@
     <div class="header-content container12">
         <!-- HEADER LOGO -->
         <div class="logo-wrapper">
-            <a href="index.html">
-                <img class="logo-header" src="/ProyectoFinal/static/images/logo.png" alt="E-Future logo"
-                    title="Aprende para el futuro" />
+            <a href="index.php">
+                <img class="logo-header" src="/ProyectoFinal/static/images/logo.png" alt="E-Future logo" title="Aprende para el futuro" />
             </a>
         </div>
 
@@ -12,11 +11,9 @@
         <div class="right-menu-header">
             <div class="icon-links">
                 <div class="search-header">
-                    <form action="search-result.php" id="data-form" class="search-form-header" method="GET"
-                        autocomplete="off">
+                    <form action="search-result.php" id="data-form" class="search-form-header" method="GET" autocomplete="off">
                         <div class="autocomplete-wrapper">
-                            <input class="header-courses-input" autocomplete="off" type="text" name="search"
-                                id="inputSearch" tabindex="16" value="Buscar cursos..." placeholder="" />
+                            <input class="header-courses-input" autocomplete="off" type="text" name="search" id="inputSearch" tabindex="16" value="Buscar cursos..." placeholder="" />
                             <button class="btn-search-header" type="button"><i class="far fa-search"></i></button>
                         </div>
                     </form>
@@ -25,12 +22,34 @@
                     <a href="#"><i class="far fa-shopping-cart"></i></a>
                     <span class="tooltip-text-cart">Carrito</span>
                 </div>
+
+                <?php
+                require_once '../public_html/lib/seguridad.php';
+                $seguridad = new Seguridad();
+                    if ($_SESSION['id'] == null) :
+                ?>
+
                 <div class="login-header">
-                    <a href="/ProyectoFinal/public_html/login.html">
+                    <a href="/ProyectoFinal/public_html/login.php">
                         <i class="fad fa-sign-in-alt"></i>
                     </a>
                     <span class="tooltip-text-cart">Login</span>
                 </div>
+
+                <?php
+                    endif;
+                    if ($_SESSION['id'] != null) :
+                ?>
+                
+                    <div class="profile-header">
+                        <a href="../public_html/miperfil.php">
+                            <i class="far fa-user-alt"></i>
+                        </a>
+                        <span class="tooltip-text-cart">Perfil</span>
+                    </div>
+                <?php
+                    endif;
+                ?>
             </div>
             <div class="blog-link">
                 <a href="#">BLOG</a>
@@ -40,7 +59,7 @@
 </div>
 
 <script>
-    $(function () {
+    $(function() {
         /*$('#inputSearch').focusin(function (e) {
             e.preventDefault();
             $(this).val('');
@@ -51,12 +70,12 @@
             $(this).val('Buscar cursos...');
         });*/
 
-        $(".btn-search-header").on("click", function () {
+        $(".btn-search-header").on("click", function() {
             $(".search-header").toggleClass("inclicked");
             $(".btn-search-header").toggleClass("close-btn");
         });
 
-        $('#inputSearch').keydown(function (event) {
+        $('#inputSearch').keydown(function(event) {
             // enter has keyCode = 13, change it if you want to use another button
             if (event.keyCode == 13) {
                 this.form.submit();
@@ -72,7 +91,7 @@
         the text field element and an array of possible autocompleted values:*/
         var currentFocus;
         /*execute a function when someone writes in the text field:*/
-        inp.addEventListener('input', function (e) {
+        inp.addEventListener('input', function(e) {
             var a,
                 b,
                 i,
@@ -101,7 +120,7 @@
                     /*insert a input field that will hold the current array item's value:*/
                     b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
                     /*execute a function when someone clicks on the item value (DIV element):*/
-                    b.addEventListener('click', function (e) {
+                    b.addEventListener('click', function(e) {
                         /*insert the value for the autocomplete text field:*/
                         inp.value = this.getElementsByTagName('input')[0].value;
                         /*close the list of autocompleted values,
@@ -113,7 +132,7 @@
             }
         });
         /*execute a function presses a key on the keyboard:*/
-        inp.addEventListener('keydown', function (e) {
+        inp.addEventListener('keydown', function(e) {
             var x = document.getElementById(this.id + 'autocomplete-list');
             if (x) x = x.getElementsByTagName('div');
             if (e.keyCode == 40) {
@@ -168,7 +187,7 @@
             }
         }
         /*execute a function when someone clicks in the document:*/
-        document.addEventListener('click', function (e) {
+        document.addEventListener('click', function(e) {
             closeAllLists(e.target);
         });
     }

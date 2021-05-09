@@ -293,6 +293,47 @@
 				}
 			}
 
+			.profile-header {
+				position: relative;
+				margin-left: 1.3em;
+
+				&:hover {
+					.tooltip-text-cart {
+						visibility: visible;
+						opacity: 1;
+					}
+				}
+
+				.tooltip-text-cart {
+					visibility: hidden;
+					width: 7em;
+					background-color: $negro;
+					color: $blanco;
+					font-family: $font4;
+					text-align: center;
+					border-radius: 0.5em;
+					padding: 0.3em 0;
+					position: absolute;
+					z-index: 1;
+					bottom: 155%;
+					left: 50%;
+					margin-left: -3.5em;
+					opacity: 0;
+					transition: opacity 0.3s;
+
+					&::after {
+						content: '';
+						position: absolute;
+						top: 100%;
+						left: 50%;
+						margin-left: -0.3em;
+						border-width: 0.4em;
+						border-style: solid;
+						border-color: $negro transparent transparent transparent;
+					}
+				}
+			}
+
 			.blog-link {
 				margin-left: 20px;
 

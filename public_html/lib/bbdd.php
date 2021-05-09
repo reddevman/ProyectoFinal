@@ -45,7 +45,7 @@ class BBDD extends Connection
     }
 
     # FUNCIÓN ACTUALIZAR
-    public function actualizarUsuario($email, $nombre, $apellidos)
+    public function actualizarUsuario($id, $email, $nombre, $apellidos)
     {
         /* Se crea un nuevo objeto de usuario y se le establece como propiedades
         * lo introducido en los parámetros de la función.
@@ -57,7 +57,7 @@ class BBDD extends Connection
 
         // Sentencia de actualización
         $sql = "UPDATE usuarios SET nombre = '" . $nombre . "',apellidos =
-            '" . $apellidos . "' WHERE email = '" . $email . "'";
+            '" . $apellidos . "' WHERE id = '" . $id . "'";
 
         // Se envía la consulta a la base de datos y se devuelve el objeto usuario creado
         $resultado = $this->realizarConsulta($sql);
@@ -69,10 +69,10 @@ class BBDD extends Connection
     }
 
     # FUNCIÓN BUSCAR USUARIO
-    public function buscarUsuario($usuario)
+    public function buscarUsuario($id, $email)
     {
         // Consulta por usuario
-        $sql = "SELECT * FROM usuarios WHERE usuario = '" . $usuario . "'";
+        $sql = "SELECT * FROM usuarios WHERE id = '" . $id . "' OR email = '" . $email . "'";
 
         // Construcción de la consulta a la variable resultado
         $resultado = $this->realizarConsulta($sql);
@@ -89,29 +89,11 @@ class BBDD extends Connection
                     $usuarioDevuelto->setEmail($userData['email']);
                     $usuarioDevuelto->setNombre($userData['nombre']);
                     $usuarioDevuelto->setApellidos($userData['apellidos']);
-                    $usuarioDevuelto->setUsuario($userData['usuario']);
                     $usuarioDevuelto->setPass($userData['pass']);
                 }
             }
             // Devolución del objeto ya rellenado con los datos necesarios
             return $usuarioDevuelto;
-        } else {
-            return null;
-        }
-    }
-
-    # FUNCIÓN BUSCAR ROLES
-    public function recogerRoles()
-    {
-        $sql = "SELECT tipo FROM roles";
-        $resultado = $this->realizarConsulta($sql);
-        $arrayEquipo = [];
-
-        if ($resultado != null) {
-            while ($fila = $resultado->fetch_assoc()) {
-                $arrayEquipo[] = $fila;
-            }
-            return $arrayEquipo;
         } else {
             return null;
         }
