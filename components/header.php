@@ -19,8 +19,8 @@
                     </form>
                 </div>
                 <div class="cart-header">
-                    <a href="#"><i class="far fa-shopping-cart"></i></a>
-                    <span class="tooltip-text-cart">Carrito</span>
+                    <a href="../public_html/carrito.php"><i class="far fa-shopping-cart"></i></a>
+                    <span class="tooltip-text">Carrito</span>
                 </div>
 
                 <?php
@@ -30,10 +30,10 @@
                 ?>
 
                 <div class="login-header">
-                    <a href="/ProyectoFinal/public_html/login.php">
+                    <a href="../public_html/login.php">
                         <i class="fad fa-sign-in-alt"></i>
                     </a>
-                    <span class="tooltip-text-cart">Login</span>
+                    <span class="tooltip-text">Login</span>
                 </div>
 
                 <?php
@@ -45,14 +45,14 @@
                         <a href="../public_html/miperfil.php">
                             <i class="far fa-user-alt"></i>
                         </a>
-                        <span class="tooltip-text-cart">Perfil</span>
+                        <span class="tooltip-text">Perfil</span>
                     </div>
 
                     <div class="exit_session-header">
                         <a href="../public_html/cerrar_sesion.php">
                             <i class="far fa-door-open"></i>
                         </a>
-                        <span class="tooltip-text-cart">Cerrar Sesión</span>
+                        <span class="tooltip-text">Cerrar Sesión</span>
                     </div>
                 <?php
                     endif;

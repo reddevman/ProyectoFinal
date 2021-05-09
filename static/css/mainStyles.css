@@ -244,12 +244,12 @@
   margin-left: 1.3em;
 }
 
-.header-full-wrapper .header-content .right-menu-header .cart-header:hover .tooltip-text-cart {
+.header-full-wrapper .header-content .right-menu-header .cart-header:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
 }
 
-.header-full-wrapper .header-content .right-menu-header .cart-header .tooltip-text-cart {
+.header-full-wrapper .header-content .right-menu-header .cart-header .tooltip-text {
   visibility: hidden;
   width: 7em;
   background-color: #303030;
@@ -268,7 +268,7 @@
   transition: opacity 0.3s;
 }
 
-.header-full-wrapper .header-content .right-menu-header .cart-header .tooltip-text-cart::after {
+.header-full-wrapper .header-content .right-menu-header .cart-header .tooltip-text::after {
   content: '';
   position: absolute;
   top: 100%;
@@ -284,12 +284,12 @@
   margin-left: 1.3em;
 }
 
-.header-full-wrapper .header-content .right-menu-header .login-header:hover .tooltip-text-cart {
+.header-full-wrapper .header-content .right-menu-header .login-header:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
 }
 
-.header-full-wrapper .header-content .right-menu-header .login-header .tooltip-text-cart {
+.header-full-wrapper .header-content .right-menu-header .login-header .tooltip-text {
   visibility: hidden;
   width: 7em;
   background-color: #303030;
@@ -308,7 +308,7 @@
   transition: opacity 0.3s;
 }
 
-.header-full-wrapper .header-content .right-menu-header .login-header .tooltip-text-cart::after {
+.header-full-wrapper .header-content .right-menu-header .login-header .tooltip-text::after {
   content: '';
   position: absolute;
   top: 100%;
@@ -324,12 +324,12 @@
   margin-left: 1.3em;
 }
 
-.header-full-wrapper .header-content .right-menu-header .profile-header:hover .tooltip-text-cart {
+.header-full-wrapper .header-content .right-menu-header .profile-header:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
 }
 
-.header-full-wrapper .header-content .right-menu-header .profile-header .tooltip-text-cart {
+.header-full-wrapper .header-content .right-menu-header .profile-header .tooltip-text {
   visibility: hidden;
   width: 7em;
   background-color: #303030;
@@ -348,7 +348,7 @@
   transition: opacity 0.3s;
 }
 
-.header-full-wrapper .header-content .right-menu-header .profile-header .tooltip-text-cart::after {
+.header-full-wrapper .header-content .right-menu-header .profile-header .tooltip-text::after {
   content: '';
   position: absolute;
   top: 100%;
@@ -364,12 +364,12 @@
   margin-left: 1.3em;
 }
 
-.header-full-wrapper .header-content .right-menu-header .exit_session-header:hover .tooltip-text-cart {
+.header-full-wrapper .header-content .right-menu-header .exit_session-header:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
 }
 
-.header-full-wrapper .header-content .right-menu-header .exit_session-header .tooltip-text-cart {
+.header-full-wrapper .header-content .right-menu-header .exit_session-header .tooltip-text {
   visibility: hidden;
   width: 7em;
   background-color: #303030;
@@ -388,7 +388,7 @@
   transition: opacity 0.3s;
 }
 
-.header-full-wrapper .header-content .right-menu-header .exit_session-header .tooltip-text-cart::after {
+.header-full-wrapper .header-content .right-menu-header .exit_session-header .tooltip-text::after {
   content: '';
   position: absolute;
   top: 100%;
