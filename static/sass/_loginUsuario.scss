@@ -68,6 +68,14 @@
 			}
 		}
 
+		.profile-title {
+			font-family: $font3;
+			font-size: 2em;
+			color: $negro;
+			text-shadow: 0.05em 0.05em $secondaryColor;
+			margin-bottom: 1em;
+		}
+
 		.link_option {
 			font-family: $font3;
 		}
@@ -109,8 +117,8 @@
 
 		a.link_home {
 			display: inline-block;
-			width: 15em;
-			padding: 1em;
+			width: 20em;
+			padding: 1.5em;
 			border-radius: 2em;
 			margin-top: 1em;
 			position: relative;
@@ -121,6 +129,7 @@
 			color: $negro;
 			background-color: $blanco;
 			transition: all 0.3s;
+			letter-spacing: 0.1em;
 
 			// &::after {
 			// 	content: '';
@@ -138,7 +147,47 @@
 			&:hover {
 				font-weight: bold;
 				color: $mainColor;
-				letter-spacing: 0.1em;
+			}
+		}
+
+		.update-wrapper {
+			background-color: rgba($blanco, 0.8);
+			border-radius: 2em;
+			width: 40em;
+			padding: 2em;
+
+			.update-title {
+				font-family: $font3;
+				font-size: 2em;
+				color: $mainColor;
+				text-align: center;
+			}
+
+			.update-subtitle {
+				margin-top: 1em;
+				font-family: $font3;
+				font-size: 2em;
+				color: $mainColor;
+				text-align: center;
+
+				a.update_link_home	 {
+					display: inline-block;
+					position: relative;
+					font-family: $font3;
+					text-align: center;
+					cursor: pointer;
+					text-decoration: none;
+					color: $linksColor;
+					background-color: $blanco;
+					transition: all 0.3s;
+		
+					&:hover {
+						font-weight: bold;
+						color: $linksColor2;
+						letter-spacing: 0.1em;
+					}
+				}
+
 			}
 		}
 	}

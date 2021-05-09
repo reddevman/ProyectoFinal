@@ -47,6 +47,13 @@
                         </a>
                         <span class="tooltip-text-cart">Perfil</span>
                     </div>
+
+                    <div class="exit_session-header">
+                        <a href="../public_html/cerrar_sesion.php">
+                            <i class="far fa-door-open"></i>
+                        </a>
+                        <span class="tooltip-text-cart">Cerrar Sesión</span>
+                    </div>
                 <?php
                     endif;
                 ?>

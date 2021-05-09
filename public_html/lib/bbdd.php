@@ -45,8 +45,11 @@ class BBDD extends Connection
     }
 
     # FUNCIÓN ACTUALIZAR
-    public function actualizarUsuario($id, $email, $nombre, $apellidos)
+    public function actualizarUsuario($id, $email, $nombre, $apellidos, $pass)
     {
+
+        $pass_hash = password_hash($pass, PASSWORD_DEFAULT);
+
         /* Se crea un nuevo objeto de usuario y se le establece como propiedades
         * lo introducido en los parámetros de la función.
         */
@@ -54,10 +57,11 @@ class BBDD extends Connection
         $modUser->setEmail($email);
         $modUser->setNombre($nombre);
         $modUser->setApellidos($apellidos);
+        $modUser->setPass($pass_hash);
 
         // Sentencia de actualización
         $sql = "UPDATE usuarios SET nombre = '" . $nombre . "',apellidos =
-            '" . $apellidos . "' WHERE id = '" . $id . "'";
+            '" . $apellidos . "' , pass = '" . $pass_hash . "'WHERE id = '" . $id . "'";
 
         // Se envía la consulta a la base de datos y se devuelve el objeto usuario creado
         $resultado = $this->realizarConsulta($sql);

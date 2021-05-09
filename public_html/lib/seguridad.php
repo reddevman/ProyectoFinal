@@ -38,13 +38,11 @@ class Seguridad
     }
 
     # FUNCIÓN QUE BORRA LOS DATOS DE LA SESIÓN CUANDO NO SON NECESARIOS
-    public function borrarDatos()
+    public function actualizarDatos($email, $nombre, $apellidos)
     {
-        $_SESSION["email"] = null;
-        $_SESSION["nombre"] = null;
-        $_SESSION["apellidos"] = null;
-        $_SESSION["tipo_error"] = null;
-        session_destroy();
+        $_SESSION["email"] = $email;
+        $_SESSION["nombre"] = $nombre;
+        $_SESSION["apellidos"] = $apellidos;
     }
 
     # FUNCIÓN DE SEGURIDAD PARA SANEAR STRING DEL FORMULARIO

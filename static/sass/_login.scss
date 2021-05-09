@@ -47,6 +47,14 @@
 			font-family: $font3;
 			font-size: 2em;
 			color: $negro;
+			text-shadow: 0.05em 0.05em $secondaryColor;
+			margin-bottom: 1em;
+		}
+
+		h4 {
+			font-family: $font3;
+			font-size: 1.5em;
+			color: $mainColor;
 		}
 
 		.login-form {

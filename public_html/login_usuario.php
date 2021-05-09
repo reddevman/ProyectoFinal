@@ -29,51 +29,53 @@ $seguridad = new Seguridad();
     </header>
 
     <div class="main-login-wrapper">
-    <div class="bg-image">
-        <img src="../static/images/sky-person.jpg" alt="">
-    </div>
+        <div class="bg-image">
+            <img src="../static/images/sky-person.jpg" alt="">
+        </div>
+        <div class="login-content">
 
 
-    <?php
+        <?php
 
-    $pass = $_POST['pass'];
 
-    if (isset($_POST['email']) && !is_null($_POST['email']) &&
-        isset($_POST['pass']) && !is_null($_POST['pass'])) {
+        if (
+            isset($_POST['email']) && !is_null($_POST['email']) &&
+            isset($_POST['pass']) && !is_null($_POST['pass'])
+        ) {
 
-        $existUser = $bbdd->buscarUsuario(null, $_POST['email']);
+            $pass = $_POST['pass'];
 
-        if ($existUser != null) {
+            $existUser = $bbdd->buscarUsuario(NULL, $_POST['email']);
 
-            if (password_verify($pass, $existUser->getPass())) {
-                $id = $existUser->getId();
-                $seguridad->addId($id);
-                $_SESSION['nombre'] = $existUser->getNombre();
-                $_SESSION['apellidos'] = $existUser->getApellidos();
-                $_SESSION['email'] = $existUser->getEmail();
-                $_SESSION['pass'] = $existUser->getPass();
-?>
-            <div class="login-content">
-                <h3 class="login-title">Sesión iniciada, Hola <span><?=$existUser->getNombre()?></span>.</h3>
-                <p class="link_option">Pulsa en el enlace que prefieras:</p>
-                <a class="link_home" href="index.php">Ir a Inicio</a></div>
-<?php
+            if ($existUser != null) {
 
+                if (password_verify($pass, $existUser->getPass())) {
+                    $id = $existUser->getId();
+                    $seguridad->addId($id);
+                    $_SESSION['nombre'] = $existUser->getNombre();
+                    $_SESSION['apellidos'] = $existUser->getApellidos();
+                    $_SESSION['email'] = $existUser->getEmail();
+                    $_SESSION['pass'] = $existUser->getPass();
+        ?>
+
+            <h3 class="login-title">Sesión iniciada, Hola <span><?= $existUser->getNombre() ?></span>.</h3>
+            <a class="link_home" href="index.php">Ir a Inicio</a>
+            <?php
+
+                } else {
+
+                    echo "<h3 class=\"login-title\">Las contraseñas no coinciden</h3>";
+                    echo "<a class='link_home' href='login.php'>Pulsar para volver a la pantalla de login</a>";
+                }
+            } else {
+                echo "<h3 class=\"login-title\">El usuario no existe en la base de datos</h3>";
+                echo "<a class='link_home' href='login.php'>Pulsar para volver a la pantalla de login</a>";
+            }
         } else {
-           
-            echo "<h3 class='login-title'>Las contraseñas no coinciden</h3>";
-            echo "<a class='link_home' href='login.php'>Pulsar para volver a la pantalla de login</a>";
+            header('Location:index.php');
         }
-
-        } else {
-        echo "<h3 class=\"login-title\">El usuario no existe en la base de datos</h3>";
-        echo "<a class='link_home' href='login.php'>Pulsar para volver a la pantalla de login</a>";
-        }
-} else {
-    header('Location:index.php');
-}
-?>
-            <!-- </div> -->
+            ?>
+        </div>
     </div>
 
     <!-- Carga mediante ajax $().load -->

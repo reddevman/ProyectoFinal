@@ -5,10 +5,10 @@ require_once 'lib/seguridad.php';
 $bbdd = new BBDD();
 $seguridad = new Seguridad();
 
+$id = $_SESSION['id'];
 $nombre = $_SESSION['nombre'];
 $apellidos = $_SESSION['apellidos'];
 $email = $_SESSION['email'];
-$pass = $_SESSION['pass'];
 
 ?>
 
@@ -38,58 +38,51 @@ $pass = $_SESSION['pass'];
         </div>
 
         <?php
-
-        $id = $_SESSION['id'];
-
         if (
             isset($nombre) && !is_null($nombre) &&
             isset($apellidos) && !is_null($apellidos) &&
-            isset($email) && !is_null($email)) {
-
-            $existUser = $bbdd->buscarUsuario($id, $email);
-
-            if ($existUser != null) {
-
-                if (password_verify($pass, $existUser->getPass())) {
+            isset($email) && !is_null($email)
+        ) {
         ?>
-                    <div class="login-content">
-                        <form class="login-form" action="actualizar_perfil.php" method="post">
-                            <input type='hidden' name='id' value='<?= $id ?>'>
-                            <label for='email'>e-mail</label>
-                            <input type='text' name='email' value='<?= $existUser->getEmail() ?>'>
-                            <label for='nombre'>Nombre</label>
-                            <input type='text' name='nombre' value='<?= $existUser->getNombre() ?>'>
-                            <label for='apellidos'>Apellidos</label>
-                            <input type='text' name='apellidos' value='<?= $existUser->getApellidos() ?>'>
-                            <label for='contraseña'>Contraseña</label>
-                            <input type='password' name='pass' value=''>
-                            <input type='submit' value='ACTUALIZAR'>
-                        </form>
-            <?php
-                } else {
 
-                    echo "Las contraseñas no coinciden";
-                    echo "<a href='login.php'>Pulsar para volver a la pantalla de login</a>";
+            <div class="login-content">
+                <h3 class="profile-title">Mi perfil</h3>
+
+                <?php
+                if ($_SESSION["tipo_error"] != null) {
+                    echo "<h4 class=\"error\">Error: " . $_SESSION["tipo_error"] . "</h4>";
                 }
-            } else {
-                echo "El usuario no existe en la base de datos";
-                echo "<a href='login.php'>Pulsar para volver a la pantalla de login</a>";
-            }
+                ?>
+
+                <form name="profileForm" class="login-form" action="actualizar_perfil.php" method="post">
+                    <input type='hidden' name='id' value='<?= $id ?>'>
+                    <label for='email'>E-mail</label>
+                    <input type='text' name='email' value='<?= $email ?>'>
+                    <label for='nombre'>Nombre</label>
+                    <input type='text' name='nombre' value='<?= $nombre ?>'>
+                    <label for='apellidos'>Apellidos</label>
+                    <input type='text' name='apellidos' value='<?= $apellidos ?>'>
+                    <label for='contraseña'>Contraseña</label>
+                    <input type='password' name='pass1' value=''>
+                    <label for='contraseña'>Repite la contraseña</label>
+                    <input type='password' name='pass2' value=''>
+                    <input type='submit' value='ACTUALIZAR'>
+                </form>
+            <?php
         } else {
             header('Location:index.php');
         }
         echo "</div>";
             ?>
-                    </div>
+            </div>
 
-                    <!-- Carga mediante ajax $().load -->
-                    <footer id="footer_container">
-                        <!-- Mensaje de error en caso de que no se cargue bien el componente -->
-                        <span id="error"></span>
-                    </footer>
-                    <script src="/ProyectoFinal/static/js/jquery-3.6.0.min.js"></script>
-                    <script src="/ProyectoFinal/static/js/mainScript.js"></script>
-
+            <!-- Carga mediante ajax $().load -->
+            <footer id="footer_container">
+                <!-- Mensaje de error en caso de que no se cargue bien el componente -->
+                <span id="error"></span>
+            </footer>
+            <script src="/ProyectoFinal/static/js/jquery-3.6.0.min.js"></script>
+            <script src="/ProyectoFinal/static/js/mainScript.js"></script>
 </body>
 
 </html>
