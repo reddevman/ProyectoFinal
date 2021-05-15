@@ -28,7 +28,7 @@ else :
             <!-- Mensaje de error en caso de que no se cargue bien el componente -->
             <span id="error"></span>
         </header>
-        <div class="main-login-wrapper">
+        <section class="main-login-wrapper">
             <div class="bg-image">
                 <img src="../static/images/sky-person.jpg" alt="">
             </div>
@@ -50,7 +50,7 @@ else :
                     <a href="registro.php">¡O REGÍSTRATE YA!</a>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Carga mediante ajax $().load -->
         <footer id="footer_container">

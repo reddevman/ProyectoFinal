@@ -56,7 +56,7 @@
 						<h4 class="title">Javascript</h4>
 						<div class="text">Aprende con el mejor curso de Javascript. Dominarás el DOM y te harás un
 							experto.</div>
-						<a href="../public_html/courses.php" class="btn_personalized">Ver más</a>
+						<a href="../public_html/cursos.php" class="btn_personalized">Ver más</a>
 					</div>
 				</div>
 				<div class="banner">
@@ -68,7 +68,7 @@
 						<h4 class="title">Python</h4>
 						<div class="text">Conoce todo lo que necesitas saber para programar en el lenguaje de moda.
 						</div>
-						<a href="../public_html/courses.php" class="btn_personalized">Ver más</a>
+						<a href="../public_html/cursos.php" class="btn_personalized">Ver más</a>
 					</div>
 				</div>
 				<div class="banner">
@@ -80,7 +80,7 @@
 						<h4 class="title">Java</h4>
 						<div class="text">A veces es mejor aprender desde las bases y nada mejor como el curso de Java.
 						</div>
-						<a href="../public_html/courses.php" class="btn_personalized">Ver más</a>
+						<a href="../public_html/cursos.php" class="btn_personalized">Ver más</a>
 					</div>
 				</div>
 				<div class="banner">
@@ -91,7 +91,7 @@
 						<i class="fab fa-css3-alt"></i>
 						<h4 class="title">CSS</h4>
 						<div class="text">Hazte un experto en dar estilos y animaciones a tus webs.</div>
-						<a href="../public_html/courses.php" class="btn_personalized">Ver más</a>
+						<a href="../public_html/cursos.php" class="btn_personalized">Ver más</a>
 					</div>
 				</div>
 			</div>

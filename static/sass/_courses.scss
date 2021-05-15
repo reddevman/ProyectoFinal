@@ -14,26 +14,26 @@
 
 		.course-content-text {
 			width: 70%;
-            position: relative;
-            animation: slideFromRight linear 1s;
+			position: relative;
+			animation: slideFromRight linear 1s;
 
-            @keyframes slideFromRight {
-                0% {
-                    transform: translateX(-300%);
-                }
-                // 50% {
-                //     transform: translateX(-200%);
-                //     opacity: 0;
-                // }
+			@keyframes slideFromRight {
+				0% {
+					transform: translateX(-300%);
+				}
+				// 50% {
+				//     transform: translateX(-200%);
+				//     opacity: 0;
+				// }
 
-                75% {
-                    opacity: 0.3;
-                }
-                100% {
-                    transform: translateX(0%);
-                    opacity: 1;
-                }
-            }
+				75% {
+					opacity: 0.3;
+				}
+				100% {
+					transform: translateX(0%);
+					opacity: 1;
+				}
+			}
 
 			.title-course {
 				font-family: $font2;
@@ -53,63 +53,61 @@
 					margin-top: 2em;
 					text-align: justify;
 
-                    span {
-                        font-weight: bold;
-                    }
+					span {
+						font-weight: bold;
+					}
 				}
 			}
 
-            .offer-wrapper {
-                display: block;
-                position: absolute;
-                top: 35%;
-                left: 50%;
-                color: $mainColor;
-                text-align: center;
+			.offer-wrapper {
+				display: block;
+				position: absolute;
+				top: 35%;
+				left: 50%;
+				color: $mainColor;
+				text-align: center;
 
-                i {
-                    color: $mainColor;
-                    font-size: 2.2rem;
-                }
+				i {
+					color: $mainColor;
+					font-size: 2.2rem;
+				}
 
-                span {
-                    display: block;
-                    font-size: 1.5rem;
-                    font-family: $font3;
-                    font-weight: bold;
-                    letter-spacing: 0.08em;
-                }
-            }
+				span {
+					display: block;
+					font-size: 1.5rem;
+					font-family: $font3;
+					font-weight: bold;
+					letter-spacing: 0.08em;
+				}
+			}
 		}
 
 		.addToCart {
 			height: 100%;
 
-			form {
-				.btn-add {
-					display: inline-block;
-					height: 100%;
-					width: 100%;
-					font-family: $font5;
-					background-color: $linksColor;
-					cursor: pointer;
-					transition: all 0.4s;
-					border: none;
-					padding: 1.8em;
+			.btn-add {
+				display: inline-block;
+				height: 100%;
+				width: 100%;
+				font-family: $font5;
+				background-color: $linksColor;
+				cursor: pointer;
+				transition: all 0.4s;
+				border: none;
+				padding: 1.8em;
+
+				span {
+					font-size: 1.2rem;
+					color: $blanco;
+					vertical-align: middle;
+				}
+
+				&:hover {
+					background-color: $linksColor2;
+					outline: 2px solid $negro;
 
 					span {
-						font-size: 1.2rem;
-						color: $blanco;
-						vertical-align: middle;
-					}
-
-					&:hover {
-						background-color: $linksColor2;
-						outline: 2px solid $negro;
-
-						span {
-							font-weight: 600;
-						}
+						font-weight: 600;
 					}
 				}
 			}

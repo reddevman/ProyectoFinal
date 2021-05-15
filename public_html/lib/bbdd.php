@@ -102,4 +102,35 @@ class BBDD extends Connection
             return null;
         }
     }
+
+    function listarCursos()
+    {
+        $sql = "SELECT * FROM productos ORDER BY nombre";
+        $resultado = $this->realizarConsulta($sql);
+        $arrayCursos = [];
+
+        if ($resultado != null) {
+            while ($fila = $resultado->fetch_assoc()) {
+                $arrayCursos[] = $fila;
+            }
+            return $arrayCursos;
+        } else {
+            return null;
+        }
+    }
+
+    function buscarCurso() {
+        $sql = "SELECT * FROM productos";
+        $resultado = $this->realizarConsulta($sql);
+        $arrayCurso = [];
+
+        if ($resultado != null) {
+            while ($fila = $resultado->fetch_assoc()) {
+                $arrayCurso[] = $fila;
+            }
+            return $arrayCurso;
+        } else {
+            return null;
+        }
+    }
 }

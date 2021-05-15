@@ -1,0 +1,185 @@
+.main-cart-wrapper {
+	position: relative;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+
+	.cart-content {
+		position: relative;
+		display: flex;
+		height: 100%;
+		width: 100%;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		h3 {
+			position: absolute;
+			top: 1em;
+			left: 0;
+			font-family: $font2;
+			font-size: 2rem;
+			text-transform: uppercase;
+			color: $mainColor;
+			text-shadow: 0.05em 0.05em $negro;
+			margin-bottom: 2em;
+		}
+
+		.empty-cart-text {
+			height: 20em;
+			font-family: $font2;
+			font-weight: bold;
+			text-shadow: 0.05em 0.05em $negro;
+			color: $mainColor;
+			animation-name: slideInDown;
+			animation-duration: 1s;
+			animation-fill-mode: both;
+			animation-timing-function: linear;
+
+			span {
+				font-size: 3rem;
+				text-transform: uppercase;
+			}
+
+			i {
+				display: block;
+				font-size: 7rem;
+				text-align: center;
+				color: $negro;
+				margin-top: 0.5em;
+			}
+
+			@keyframes slideInDown {
+				0% {
+					transform: translateY(-500px);
+				}
+				100% {
+					transform: translateY(0);
+				}
+			}
+		}
+
+		.link_wrapper {
+			width: 100%;
+			height: 10em;
+
+			a.link_courses {
+				position: relative;
+				display: flex;
+				justify-content: center;
+				width: 50%;
+				margin: 0 auto;
+				padding: 1.5em;
+				border-radius: 2em;
+				// margin-top: 6em;
+				font-family: 'Poppins', sans-serif;
+				text-align: center;
+				cursor: pointer;
+				text-decoration: none;
+				color: $blanco;
+				background-color: $negro;
+				-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+				letter-spacing: 0.1em;
+				font-weight: normal;
+
+				&:hover {
+					font-weight: bold;
+					// margin-top: 1em;
+					font-size: 1.3rem;
+					width: 50%;
+					color: $blanco;
+					background-color: $mainColor;
+				}
+			}
+		}
+
+		.course-content {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-evenly;
+			width: 100%;
+			position: relative;
+
+			img {
+				width: 7em;
+			}
+
+			.title-course {
+				width: 50%;
+				font-family: $font2;
+				font-size: 1.5rem;
+			}
+
+			.price-course {
+				font-weight: bold;
+				color: $accentColor;
+				font-family: $font5;
+				font-size: 1rem;
+			}
+
+			a.btn_delete {
+				width: 1em;
+				height: 1em;
+				background-color: $mainColor;
+				padding: 1em;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 2em;
+				font-family: $font5;
+				font-weight: bold;
+				color: $blanco;
+				text-decoration: none;
+				box-shadow: 0.2em 0.05em $negro;
+			}
+		}
+
+		hr {
+			height: 1px;
+			width: 100%;
+			color: $mainColor;
+			margin: 2em 0 2em 0;
+		}
+
+		.sum-container {
+			font-family: $font5;
+			font-weight: bold;
+			font-size: 3rem;
+		}
+
+		.delete_cart {
+			width: 100%;
+			height: 10em;
+
+			a.link_courses {
+				position: relative;
+				display: flex;
+				justify-content: center;
+				width: 30%;
+				margin: 0 auto;
+				padding: 1.5em;
+				border-radius: 2em;
+				margin-top: 2em;
+				font-family: 'Poppins', sans-serif;
+				text-align: center;
+				cursor: pointer;
+				text-decoration: none;
+				color: $blanco;
+				background-color: $negro;
+				-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+				letter-spacing: 0.1em;
+				font-weight: normal;
+
+				&:hover {
+					font-weight: bold;
+					width: 50%;
+					color: $blanco;
+					background-color: $mainColor;
+				}
+			}
+		}
+	}
+}

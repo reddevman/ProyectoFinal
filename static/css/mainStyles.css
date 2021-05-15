@@ -1353,7 +1353,7 @@
   height: 100%;
 }
 
-.courses-custom-wrapper .course-container .addToCart form .btn-add {
+.courses-custom-wrapper .course-container .addToCart .btn-add {
   display: inline-block;
   height: 100%;
   width: 100%;
@@ -1366,18 +1366,18 @@
   padding: 1.8em;
 }
 
-.courses-custom-wrapper .course-container .addToCart form .btn-add span {
+.courses-custom-wrapper .course-container .addToCart .btn-add span {
   font-size: 1.2rem;
   color: #f5f5f5;
   vertical-align: middle;
 }
 
-.courses-custom-wrapper .course-container .addToCart form .btn-add:hover {
+.courses-custom-wrapper .course-container .addToCart .btn-add:hover {
   background-color: #26a699;
   outline: 2px solid #303030;
 }
 
-.courses-custom-wrapper .course-container .addToCart form .btn-add:hover span {
+.courses-custom-wrapper .course-container .addToCart .btn-add:hover span {
   font-weight: 600;
 }
 
@@ -1386,6 +1386,234 @@
   width: 100%;
   color: #f24141;
   margin: 2em 0 2em 0;
+}
+
+.main-cart-wrapper {
+  position: relative;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-cart-wrapper .cart-content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-cart-wrapper .cart-content h3 {
+  position: absolute;
+  top: 1em;
+  left: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #f24141;
+  text-shadow: 0.05em 0.05em #303030;
+  margin-bottom: 2em;
+}
+
+.main-cart-wrapper .cart-content .empty-cart-text {
+  height: 20em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  text-shadow: 0.05em 0.05em #303030;
+  color: #f24141;
+  -webkit-animation-name: slideInDown;
+          animation-name: slideInDown;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.main-cart-wrapper .cart-content .empty-cart-text span {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.main-cart-wrapper .cart-content .empty-cart-text i {
+  display: block;
+  font-size: 7rem;
+  text-align: center;
+  color: #303030;
+  margin-top: 0.5em;
+}
+
+@keyframes slideInDown {
+  0% {
+    -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.main-cart-wrapper .cart-content .link_wrapper {
+  width: 100%;
+  height: 10em;
+}
+
+.main-cart-wrapper .cart-content .link_wrapper a.link_courses {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+  padding: 1.5em;
+  border-radius: 2em;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: #f5f5f5;
+  background-color: #303030;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  letter-spacing: 0.1em;
+  font-weight: normal;
+}
+
+.main-cart-wrapper .cart-content .link_wrapper a.link_courses:hover {
+  font-weight: bold;
+  font-size: 1.3rem;
+  width: 50%;
+  color: #f5f5f5;
+  background-color: #f24141;
+}
+
+.main-cart-wrapper .cart-content .course-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+  position: relative;
+}
+
+.main-cart-wrapper .cart-content .course-content img {
+  width: 7em;
+}
+
+.main-cart-wrapper .cart-content .course-content .title-course {
+  width: 50%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+}
+
+.main-cart-wrapper .cart-content .course-content .price-course {
+  font-weight: bold;
+  color: #f2b035;
+  font-family: "Spartan", sans-serif;
+  font-size: 1rem;
+}
+
+.main-cart-wrapper .cart-content .course-content a.btn_delete {
+  width: 1em;
+  height: 1em;
+  background-color: #f24141;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 2em;
+  font-family: "Spartan", sans-serif;
+  font-weight: bold;
+  color: #f5f5f5;
+  text-decoration: none;
+  -webkit-box-shadow: 0.2em 0.05em #303030;
+          box-shadow: 0.2em 0.05em #303030;
+}
+
+.main-cart-wrapper .cart-content hr {
+  height: 1px;
+  width: 100%;
+  color: #f24141;
+  margin: 2em 0 2em 0;
+}
+
+.main-cart-wrapper .cart-content .sum-container {
+  font-family: "Spartan", sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.main-cart-wrapper .cart-content .delete_cart {
+  width: 100%;
+  height: 10em;
+}
+
+.main-cart-wrapper .cart-content .delete_cart a.link_courses {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 30%;
+  margin: 0 auto;
+  padding: 1.5em;
+  border-radius: 2em;
+  margin-top: 2em;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: #f5f5f5;
+  background-color: #303030;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  letter-spacing: 0.1em;
+  font-weight: normal;
+}
+
+.main-cart-wrapper .cart-content .delete_cart a.link_courses:hover {
+  font-weight: bold;
+  width: 50%;
+  color: #f5f5f5;
+  background-color: #f24141;
 }
 
 @-ms-viewport {
