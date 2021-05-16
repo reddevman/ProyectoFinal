@@ -45,7 +45,7 @@
 					</div>
 				</div>
 				<div class="addToCart">
-					<button class="btn-add" onclick="window.location.href='agregarCarrito.php?course_id=<?php echo $id; ?>'">
+					<button class="btn-add" onclick="window.location.href='agregar_carrito.php?course_id=<?php echo $id; ?>'">
 						<span>AÑADIR AL CARRITO</span>
 					</button>
 				</div>

@@ -14,7 +14,9 @@
                     <form action="search-result.php" id="data-form" class="search-form-header" method="GET" autocomplete="off">
                         <div class="autocomplete-wrapper">
                             <input class="header-courses-input" autocomplete="off" type="text" name="search" id="inputSearch" tabindex="16" value="Buscar cursos..." placeholder="" />
-                            <button class="btn-search-header" type="button"><i class="far fa-search"></i></button>
+                            <button class="btn-search-header" type="button">
+                                <i class="far fa-search"></i>
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -26,21 +28,21 @@
                 <?php
                 require_once '../public_html/lib/seguridad.php';
                 $seguridad = new Seguridad();
-                    if ($_SESSION['id'] == null) :
+                if ($_SESSION['id'] == null) :
                 ?>
 
-                <div class="login-header">
-                    <a href="../public_html/login.php">
-                        <i class="fad fa-sign-in-alt"></i>
-                    </a>
-                    <span class="tooltip-text">Login</span>
-                </div>
+                    <div class="login-header">
+                        <a href="../public_html/login.php">
+                            <i class="fad fa-sign-in-alt"></i>
+                        </a>
+                        <span class="tooltip-text">Login</span>
+                    </div>
 
                 <?php
-                    endif;
-                    if ($_SESSION['id'] != null) :
+                endif;
+                if ($_SESSION['id'] != null) :
                 ?>
-                
+
                     <div class="profile-header">
                         <a href="../public_html/miperfil.php">
                             <i class="far fa-user-alt"></i>
@@ -55,7 +57,7 @@
                         <span class="tooltip-text">Cerrar Sesión</span>
                     </div>
                 <?php
-                    endif;
+                endif;
                 ?>
             </div>
             <div class="blog-link">

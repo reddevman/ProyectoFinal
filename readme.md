@@ -6,7 +6,7 @@ Archivos **html** de las páginas (index.php por ejemplo).
 
 - ## /components
 
-**Componentes** comunes a todas las páginas (navbar, footer,etc.).
+**Componentes** comunes a todas las páginas (header, footer,etc.).
 
 - ## /static/css
 
