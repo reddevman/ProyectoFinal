@@ -72,6 +72,8 @@
                     $seguridad->setError('La contraseña no coincide');
                     header('Location:registro.php');
                 }
+            } else {
+                header('Location:index.php');
             }
             ?>
 

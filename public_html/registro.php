@@ -40,7 +40,7 @@ $seguridad = new Seguridad();
                 <?php
                 // Comprobación en caso de que ya haya una información de sesión previa en el navegador
                 if ($_SESSION['id'] != null) {
-                    echo "<input type='text' id='email' name='email' value='" . $_SESSION['usuario'] . "' required></br>";
+                    echo "<input type='text' id='email' name='email' value='" . $_SESSION['email'] . "' required></br>";
                 } else {
                     echo "<input autocomplete=\"off\" type=\"text\" id=\"email\" name=\"email\" required></br>";
                 }

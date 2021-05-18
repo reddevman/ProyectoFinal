@@ -30,7 +30,7 @@ class Seguridad
     }
 
 
-    # FUNCIÓN PARA AÑADIR EL USUARIO A LA SESIÓN
+    # FUNCIÓN PARA AÑADIR ID A LA SESIÓN
     public function addId($id)
     {
         $_SESSION["id"] = $id;

@@ -66,6 +66,8 @@ $pass = $_POST['pass1'];
                     echo $seguridad->setError('La contraseña no coincide');
                     header('Location:miperfil.php');
                 }
+            } else {
+                header('Location: index.php');
             }
             ?>
 
